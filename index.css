@@ -166,14 +166,35 @@ li {
     letter-spacing: 0.08em;
 }
 
-.scrollBar p{
+.scrollBar {
     background-color: #efb5d9;
     color: white;
+    overflow: hidden;
+}
+
+.scrollBar p{
     margin: 0;
     font-size: 28px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     box-sizing: border-box;
+    animation-name: move;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
 }
 
 .bestseller {
